@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        {% if request.user.is_authenticated %}
+            <h3>MucitPark İş Takip Sistemine Hoş Geldin {{ request.user.username }}</h3>
+            <p>Yapılması gereken işlerin ve biten işlerin 
+                takibinin yapılacağı sistem.</p>
+        {% else %}
+                <h3>MucitPark İş Takip Sistemine Hoş Geldin.</h3>
+                <p>
+                    Bu sistemi kullanabilmek için bir hesap oluştur
+                    ve giriş yap.
+                </p>
+        {% endif %}
+    </div>
+
+{% endblock body %}
