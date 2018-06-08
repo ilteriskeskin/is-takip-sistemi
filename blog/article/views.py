@@ -12,6 +12,7 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 
+@login_required(login_url='/user/login')
 def articles(request):
     articles = Article.objects.all()
 
@@ -40,7 +41,7 @@ def addarticle(request):
         return redirect("index")
 
     return render(request, "addarticle.html", {"form":form})
-
+@login_required(login_url='/user/login/')
 def detail(request, id):
     article = get_object_or_404(Article, id = id)
     return render(request, "detail.html", {"article":article})
