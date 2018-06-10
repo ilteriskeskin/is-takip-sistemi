@@ -1,8 +1,26 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<!--
+<p>{{ articles.author }} Kişisinin Eklediği Görevler: </p>
 
-<p>Eklediği Görevler: </p>
+
+{% if articles %}
+
+    {% for article in articles %}
+
+        {{ article.title }}
+    
+    {% endfor %}
+
+{% else %}
+
+<div class="alert alert-danger">
+    Sayfa Henüz Hazır Değil !
+</div>
+
+{% endif %}
+-->
 
 <div class="alert alert-danger">
     Sayfa Henüz Hazır Değil !

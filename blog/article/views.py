@@ -76,3 +76,9 @@ def userList(request):
     users = User.objects.all()
     
     return render(request, "userlist.html", {"users":users}) 
+
+@login_required(login_url='/user/login/')
+def userJob(request, id):
+    articles = Article.objects.all()
+    
+    return render(request, "userjob.html", {"articles":articles})

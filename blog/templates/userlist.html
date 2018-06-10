@@ -12,6 +12,7 @@
             </p> 
     </div>
 
+    
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -23,10 +24,16 @@
         {% for user in users %}
         <tr>
             <th scope="row">{{ user.id }}</th>
-            <td><a href="/user/userjob/{{ user.id }}">{{ user }}</a></td>
+            <td><a href="/articles/userjob/{{ user.id }}">{{ user }}</a></td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
-
+    
+    <!--
+    {% for user in users %}
+        <p><strong>{{ user.id }}--------------------------{{ user }}</strong></p>
+        <hr>
+    {% endfor %}
+    -->
 {% endblock body %}     
