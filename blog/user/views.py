@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from article.models import Article
 
 # Create your views here.
 
@@ -57,3 +59,7 @@ def logoutUser(request):
     messages.success(request, "Başarıyla çıkış yapıldı.")
     
     return redirect("index")
+
+@login_required(login_url='/user/login/')
+def userJob(request, id): 
+    return render(request, "userjob.html")

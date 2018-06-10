@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h3>
+            MucitPark İş Takip Sistemi Üye Görüntüleme Sayfasına Hoş Geldin {{ request.user.username }}
+        </h3>
+            <p>
+                Kişi Listesi Görüntüleme Sayfası. Kişinin 
+                görevlerine ulaşmak için kullanıcı adına tıklayın.
+            </p> 
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kullanıcı</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+        <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td><a href="/user/userjob/{{ user.id }}">{{ user }}</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock body %}     

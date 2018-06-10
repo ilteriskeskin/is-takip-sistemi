@@ -22,7 +22,7 @@
               <!-- Author -->
               <p style="color: green" class="lead">
                 by
-                {{ article.author}}
+                <a href="/articles/userjob/{{article.id}}">{{ article.author }}</a>
               </p>
     
               <hr>
@@ -30,11 +30,6 @@
               <!-- Date/Time -->
               <p style="color:blue"> {{ article.created_date }} <p>
     
-              <hr>
-    
-              <!-- Preview Image 
-              <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-              -->
               <hr>
     
               <!-- Post Content -->

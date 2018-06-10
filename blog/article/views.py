@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from .forms import ArticleForm
 from .models import Article
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -69,3 +70,9 @@ def deleteArticle(request, id):
     messages.success(request, "Görev Başarılı Bir Şekilde Silindi.")
 
     return redirect("index")
+
+@login_required(login_url='/user/login/')
+def userList(request):
+    users = User.objects.all()
+    
+    return render(request, "userlist.html", {"users":users}) 
