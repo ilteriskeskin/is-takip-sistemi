@@ -7,7 +7,48 @@
             <h3>MucitPark İş Takip Sistemine Hoş Geldin {{ request.user.username }}</h3>
             <p>Yapılması gereken işlerin ve biten işlerin 
                 takibinin yapılacağı sistem.</p>
+    </div>
+    <h4>Güncel Görev Listesi: </h4>
+    <hr>
+    <h5 style="color:rgb(75, 11, 11)">Görev Detaylarını Görüntülemek İçin Görevin Başlığının Üzerine Tıklayınız</h5>
+    <hr>
+        {% if articles %}
+
+            <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Kullancı Adı</th>
+                <th scope="col">Görev Başlığı</th>
+                <th scope="col">Tarih</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                
+                <tr>
+                <th class="bg-danger" scope="row">{{ article.id }}</th>
+                <td class="bg-danger">{{ article.author }}</td>
+                <td><a href="/articles/article/{{article.id}}">{{ article.title }}</a></td>
+                <td class="bg-success">{{ article.created_date }}</td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+            </table>
+            
+            {% else %}
+            
+            <div class="alert alert-danger">
+                Herhangi Bir Görev Bulunmuyor ! 
+            </div>
+            
+        {% endif %}
+
         {% else %}
+
+        <div class="jumbotron text-center">
                 <h3>MucitPark İş Takip Sistemine Hoş Geldin.</h3>
                 <p>
                     Bu sistemi kullanabilmek için bir hesap oluştur

@@ -44,7 +44,7 @@ def loginUser(request):
         user = authenticate(username = username, password = password)
 
         if user is None:
-            messages.error(request, "Kullanıcı Adı veya Parola Hatalı !")
+            messages.warning(request, "Kullanıcı Adı veya Parola Hatalı !")
             return render(request, "login.html", context)
 
         messages.success(request, "Başarıyla Giriş Yaptınız.")
