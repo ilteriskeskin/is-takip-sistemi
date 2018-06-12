@@ -9,4 +9,4 @@ class Article(models.Model):
     created_date = models.DateTimeField(auto_now_add = True, verbose_name = "Oluşturulma Tarihi")
 
     def __str__(self):
-        return self.title,
+        return self.title
