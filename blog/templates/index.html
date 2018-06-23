@@ -21,6 +21,7 @@
                 <th scope="col">Kullancı Adı</th>
                 <th scope="col">Görev Başlığı</th>
                 <th scope="col">Tarih</th>
+                <th scope="col">Bitiş Tarihi</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,7 @@
                 <td class="bg-danger">{{ article.author }}</td>
                 <td><a href="/articles/article/{{article.id}}">{{ article.title }}</a></td>
                 <td class="bg-success">{{ article.created_date }}</td>
+                <td class="bg-warning">{{ article.finished_date }}</td>
                 </tr>
 
                 {% endfor %}
