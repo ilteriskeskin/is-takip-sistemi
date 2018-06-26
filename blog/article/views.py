@@ -4,7 +4,8 @@ from .models import Article
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from django.apps import apps
+Coin = apps.get_model('coin', 'Coin')
 # Create your views here.
 
 def index(request):
@@ -75,6 +76,7 @@ def deleteArticle(request, id):
 
 @login_required(login_url='/user/login/')
 def userList(request):
-    users = User.objects.all()
     
-    return render(request, "userlist.html", {"users":users})
+    coins = Coin.objects.all()
+
+    return render(request, "userlist.html", {'coins' : coins})

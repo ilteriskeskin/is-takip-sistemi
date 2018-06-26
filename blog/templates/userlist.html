@@ -22,11 +22,11 @@
         </tr>
         </thead>
         <tbody>
-        {% for user in users %}
+        {% for coin in coins %}
         <tr>
-            <th scope="row">{{ user.id }}</th>
-            <td>{{ user }}</td>
-            <td>{{ user.coin }}</td>
+            <th scope="row">{{ coin.id }}</th>
+            <td>{{ coin.author }}</td>
+            <td>{{ coin.quantity }}</td>
         </tr>
         {% endfor %}
         </tbody>
