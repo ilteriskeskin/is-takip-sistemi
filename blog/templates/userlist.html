@@ -4,11 +4,10 @@
 
     <div class="jumbotron text-center">
         <h3>
-            MucitPark İş Takip Sistemi Üye Görüntüleme Sayfasına Hoş Geldin {{ request.user.username }}
+            MucitPark İş Takip Sistemi Üye Coin Miktarı Görüntüleme Sayfasına Hoş Geldin {{ request.user.username }}
         </h3>
             <p>
-                Kişi Listesi Görüntüleme Sayfası. Kişinin 
-                görevlerine ulaşmak için kullanıcı adına tıklayın.
+                Kişilerin Coinlerini Görüntülendiği Sayfası
             </p> 
     </div>
 
@@ -32,10 +31,4 @@
         </tbody>
     </table>
     
-    <!--
-    {% for user in users %}
-        <p><strong>{{ user.id }}--------------------------{{ user }}</strong></p>
-        <hr>
-    {% endfor %}
-    -->
 {% endblock body %}     
