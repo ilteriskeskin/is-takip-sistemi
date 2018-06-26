@@ -18,13 +18,15 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Kullanıcı</th>
+            <th scope="col">Coin</th>
         </tr>
         </thead>
         <tbody>
         {% for user in users %}
         <tr>
             <th scope="row">{{ user.id }}</th>
-            <td><a href="/articles/userjob/{{ user.id }}">{{ user }}</a></td>
+            <td>{{ user }}</td>
+            <td>{{ user.coin }}</td>
         </tr>
         {% endfor %}
         </tbody>
