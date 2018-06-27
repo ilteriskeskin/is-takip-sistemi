@@ -11,7 +11,8 @@
             </p> 
     </div>
 
-    
+
+    {% if coins %}
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -30,5 +31,9 @@
         {% endfor %}
         </tbody>
     </table>
-    
+    {% else %}
+        <div class="alert alert-danger">
+            Herhangi Bir Görev Bulunmuyor ! 
+        </div>
+    {% endif %}
 {% endblock body %}     
