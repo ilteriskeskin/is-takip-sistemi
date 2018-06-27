@@ -5,7 +5,7 @@ from .models import Coin
 
 @admin.register(Coin)
 class CoinAdmin(admin.ModelAdmin):
-    list_display = ('author', 'content','quantity')
+    list_display = ['author', 'content','quantity']
     list_link = ('author')
 
     class Meta:

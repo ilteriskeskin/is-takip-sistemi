@@ -80,3 +80,10 @@ def userList(request):
     coins = Coin.objects.all()
 
     return render(request, "userlist.html", {'coins' : coins})
+
+@login_required(login_url='/user/login/')
+def activity(request):
+    
+    coins = Coin.objects.all()
+
+    return render(request, "activity.html", {'coins' : coins})

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h3>
+            MucitPark İş Takip Sistemi Üye Coin Dağıtımı Görüntüleme Sayfasına Hoş Geldin {{ request.user.username }}
+        </h3>
+            <p>
+                Kişilerin Coin Dağıtımı Hareketlerinin Görüntülendiği Sayfası
+            </p> 
+    </div>
+
+    
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kullanıcı</th>
+            <th scope="col">Neden</th>
+            <th scope="col">Coin</th>
+            <th scope="col">Verilme Tarihi</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for coin in coins %}
+        <tr>
+            <th scope="row">{{ coin.id }}</th>
+            <td>{{ coin.author }}</td>
+            <td>{{ coin.content }}</td>
+            <td>{{ coin.quantity }}</td>
+            <td> {{ coin.created_date }} </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+{% endblock body %}     
