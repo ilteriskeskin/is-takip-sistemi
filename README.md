@@ -17,3 +17,7 @@
 #### 6-) Eğer parolanızı unutursanız admine haber verin. Hesabınız silinecek ve yeni hesap açılacak.
 
 #### 7-) Parolanızı unutmamaya çalışın :)
+
+#### 8-) 'python3 manage.py createsuperuser' yazarak bir admin oluşturun.
+
+#### 9-) Yalnızca admin kişi admin sayfasından coin eklemesi yapabilmektedir.
