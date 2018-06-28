@@ -14,7 +14,7 @@
           <!-- Author -->
           <p style="color: green" class="lead">
             by
-            {{ article.author}}
+            {{ article.author }}
           </p>
 
           <hr>
@@ -26,7 +26,7 @@
 
           <!-- Post Content -->
           <p class="lead">
-            {{ article.content }}
+            {{ article.content | safe }}
           </p>
           <hr>
 
