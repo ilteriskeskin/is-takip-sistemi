@@ -16,7 +16,6 @@
     <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Kullanıcı</th>
             <th scope="col">Coin</th>
         </tr>
@@ -24,7 +23,6 @@
         <tbody>
         {% for coin in coins %}
         <tr>
-            <th scope="row">{{ coin.id }}</th>
             <td>{{ coin.author }}</td>
             <td>{{ coin.quantity }}</td>
         </tr>
