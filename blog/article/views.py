@@ -85,5 +85,5 @@ def userList(request):
 def activity(request):
     
     coins = Coin.objects.all()
-
+    
     return render(request, "activity.html", {'coins' : coins})
